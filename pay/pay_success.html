@@ -574,7 +574,7 @@
       if (transaction_id) {
         let requestObj = { transaction_id: transaction_id }
         let httpRequest = new XMLHttpRequest() //第一步：创建需要的对象
-        httpRequest.open('POST', 'https://wawebsender.com/api/wapi/get-transaction-info', true) //第二步：dev
+        httpRequest.open('POST', 'https://wazapsenderextension.vercel.app/api/wapi/get-transaction-info', true) //第二步：dev
         httpRequest.setRequestHeader('Content-type', 'application/json') //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
         httpRequest.send(JSON.stringify(requestObj)) //发送请求 将情头体写在send中
         /**
@@ -597,7 +597,7 @@
       // httpRequest.open('POST', 'http://127.0.0.1:8000/api/wapi/permission/active-code-list/', true) //第二步：打开连接
       httpRequest.open(
         'POST',
-        'https://wawebsender.com/api/wapi/permission/active-code-list/',
+        'https://wazapsenderextension.vercel.app/api/wapi/permission/active-code-list/',
         true
       ) //第二步：dev
       httpRequest.setRequestHeader('Content-type', 'application/json') //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
